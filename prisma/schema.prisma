@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Task{
+  id               Int      @id @default(autoincrement())
+  title            String //Task title
+  description      String?// Description of task(optional)
+  priority         String   @default("medium") //How important the task is
+  estimatedMinutes Int      @default(30) //Estimated time to complete the task
+  deadline         DateTime? //Deadline date and time for the task
+  createdAt        DateTime @default(now()) //Date and time the task was created
+}
+
+model Plan {
+  id               Int      @id @default(autoincrement())
+  weekJson Json //stores the AI-generated schedule as JSON
+  createdAt DateTime @default(now()) //Date and time the plan was created
+}
