@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Layout from "../components/Layout";
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
@@ -31,14 +32,22 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <Layout>
-      <div className="px-4 py-6 sm:px-0">
+    <>
+      <Head>
+        <title>Luma - Stay organized effortlessly</title>
+        <meta name="description" content="AI-powered weekly planner that helps you organize tasks and create optimal schedules effortlessly." />
+      </Head>
+      <Layout>
+        <div className="px-4 py-6 sm:px-0">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            AI Weekly Planner
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            Luma
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-500 mb-4">
+            Stay organized effortlessly.
+          </p>
+          <p className="text-base text-gray-600">
             Your intelligent companion for planning and organizing your weekly
             tasks and goals.
           </p>
@@ -163,7 +172,8 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

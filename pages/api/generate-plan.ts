@@ -66,7 +66,7 @@ export default async function handler(
 
     // Create a comprehensive prompt for the AI planner
     const prompt = `
-You are an AI weekly planner assistant. Your job is to create an optimal weekly schedule.
+You are Luma, an AI weekly planner assistant. Your job is to create an optimal weekly schedule.
 
 TASK: Distribute the following tasks into a 7-day weekly plan (Monday–Sunday).
 
@@ -98,7 +98,7 @@ ${taskDescriptions}
     `;
 
     // STEP 3: Call OpenAI API to generate the weekly plan
-    console.log("🤖 Calling OpenAI to generate weekly plan...");
+    console.log("🤖 Luma is generating your weekly plan...");
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini", // Cost-effective model for development
       messages: [{ role: "user", content: prompt }],
@@ -114,7 +114,7 @@ ${taskDescriptions}
     }
 
     const weeklyPlan = JSON.parse(aiResponse);
-    console.log("✅ AI generated weekly plan successfully");
+    console.log("✅ Luma generated weekly plan successfully");
 
     // STEP 4: Save the generated plan to the database
     const plan = await prisma.plan.create({
@@ -126,7 +126,7 @@ ${taskDescriptions}
       id: plan.id,
       weekJson: plan.weekJson,
       createdAt: plan.createdAt,
-      message: "AI-powered weekly plan generated successfully!",
+      message: "Luma has generated your weekly plan successfully!",
     });
   } catch (error) {
     // Handle different types of errors

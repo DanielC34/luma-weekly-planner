@@ -45,8 +45,8 @@ export default function GeneratePlanButton({
         onPlanGenerated(data);
       }
 
-      // Show success message
-      alert("Weekly plan generated successfully!");
+          // Show success message
+          alert("Luma has generated your weekly plan successfully!");
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : "Failed to generate plan";

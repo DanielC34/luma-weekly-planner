@@ -1,4 +1,6 @@
-# AI Weekly Planner
+# Luma
+
+**Stay organized effortlessly.**
 
 An intelligent productivity application that uses AI to create optimal weekly schedules based on your tasks, deadlines, and priorities. Built with Next.js, TypeScript, and powered by OpenAI GPT-4o-mini for smart task scheduling.
 
@@ -65,7 +67,7 @@ An intelligent productivity application that uses AI to create optimal weekly sc
 
    ```bash
    git clone <your-repo-url>
-   cd ai-weekly-planner
+   cd luma-weekly-planner
    ```
 
 2. **Install dependencies**
@@ -141,7 +143,7 @@ model Plan {
 ## 🏗️ Project Structure
 
 ```
-ai-weekly-planner/
+luma-weekly-planner/
 ├── app/                    # App Router files
 │   ├── generated/         # Prisma generated client
 │   └── globals.css        # Global styles
@@ -286,7 +288,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/your-username/ai-weekly-planner/issues) page
+1. Check the [Issues](https://github.com/your-username/luma-weekly-planner/issues) page
 2. Create a new issue with detailed information
 3. Contact the maintainers
 
